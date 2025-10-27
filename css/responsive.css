@@ -1,0 +1,180 @@
+/* ============================
+   Base styles for all screens
+============================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Container base */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Make all images responsive globally */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============================
+   Desktop (large screens)
+============================ */
+@media screen and (min-width: 1025px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* ============================
+   Tablets
+============================ */
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 95%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .fullNav {
+        padding: 0 20px;
+    }
+
+    #logo img {
+        height: 60px;
+    }
+}
+
+/* ============================
+   Mobile Devices
+============================ */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /* Navigation */
+    .fullNav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .list1 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        background: white;
+    }
+
+    .list1 li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* Hero Section */
+    .hero-content {
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    /* Services Section */
+    .services-container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .service-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Forms */
+    form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    input, textarea, select {
+        width: 100%;
+        margin: 5px 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+}
+
+/* ============================
+   Small Mobile (Extra small)
+============================ */
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 10px;
+    }
+
+    .fullNav {
+        padding: 0 10px;
+    }
+
+    #logo img {
+        height: 50px;
+    }
+
+    .menu-btn {
+        padding: 5px;
+        font-size: 1.2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .service-card {
+        margin: 8px 0;
+    }
+}
